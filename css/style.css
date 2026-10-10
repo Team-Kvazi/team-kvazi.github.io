@@ -275,7 +275,35 @@ body {
   font-size: 14px;
   text-align: center;
 }
+.calc-form__select {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  appearance: none; /* Убираем стандартную стрелку браузера */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239aa0b5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 40px; /* Чтобы текст не налезал на стрелку */
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
 
+.calc-form__select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(124, 108, 240, 0.15);
+}
+
+/* Стилизация выпадающих опций внутри списка */
+.calc-form__select option {
+  background: var(--surface);
+  color: var(--text);
+  padding: 10px;
+}
 /* ===== Адаптивность ===== */
 @media (max-width: 640px) {
   .hero__title {
