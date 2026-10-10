@@ -101,6 +101,16 @@
           <span>Заинтересованность (0–100)</span>
           <input type="number" id="interest" min="0" max="100" value="70" required />
         </label>
+        <label class="calc-form__label">
+  <span>Выберите преподавателя</span>
+  <select id="teacherSelect" class="calc-form__select">
+    <option value="default">Стандартный баланс (равные веса)</option>
+    <option value="ivanov">Иванов И.И. (Важна заинтересованность)</option>
+    <option value="petrov">Петров П.П. (Строгий, важна успеваемость)</option>
+    <option value="sidorov">Сидоров С.С. (Важно отношение и контакт)</option>
+  </select>
+        </label>
+
         <button type="submit" class="btn btn--primary">Рассчитать</button>
       </form>
       <div id="result" class="result" hidden>
